@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testando DOM com o usuario</title>
+    <style>
+      body {
+        background-color: lightblue;
+        font: normal 15px Arial;
+      }
+      input {
+        width: 100px;
+        height: 20px;
+      }
+      input.botao {
+        width: 100px;
+        height: 28px;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 15px;
+      }
+      div#resultado {
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Soma dos valores</h1>
+    <input type="number" name="txt1" id="txt1" /> +
+    <input type="number" name="txt2" id="txt2" />
+    <input type="button" value="somar" onclick="somar()" class="botao" />
+    <div id="resultado">Resultado</div>
+    <script>
+      function somar() {
+        const res = window.document.getElementById("resultado");
+        const n1 = window.document.querySelector("input#txt1");
+        const n2 = window.document.querySelector("input#txt2");
+        const filter1 = Number(n1.value);
+        const filter2 = Number(n2.value);
+        const soma = filter1 + filter2;
+        res.innerText = `${filter1} + ${filter2} = ${soma}`;
+      }
+    </script>
+  </body>
+</html>
