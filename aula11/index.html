@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de pais</title>
+  </head>
+  <body>
+    <h1>Onde você nasceu?!</h1>
+    <input type="text" id="paisNascido" placeholder="Pais de Origem" />
+    <input type="button" value="Checar" onclick="origem()" />
+    <div id="res">
+      <p>Resultado:</p>
+    </div>
+    <script>
+      function origem() {
+        const pais = window.document.querySelector("input#paisNascido").value;
+        const lowerPais = pais.toLowerCase();
+        const res = window.document.getElementById("res");
+        console.log(lowerPais);
+        if (lowerPais != "brasil") {
+          res.innerHTML = `<p>Você nasceu em <strong>${lowerPais}</strong>, portanto você e gringo</p>`;
+        } else {
+          res.innerHTML = `<p>Você nasceu no <strong>${lowerPais}</strong>, portanto você e de <strong>Cria</strong></p>`;
+        }
+      }
+    </script>
+  </body>
+</html>
