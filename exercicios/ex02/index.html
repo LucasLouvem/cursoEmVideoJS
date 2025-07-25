@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Verificador de Idade</h1>
+    </header>
+    <section>
+      <form>
+        <label for="data_nascimento">Ano de Nascimento: </label>
+        <input type="number" /><br />
+        <label for="sexo_pessoa">Sexo: </label>
+        <input type="radio" id="selec_masculino" />
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="selec_feminino" />
+        <label for="feminino">Feminino</label>
+        <br />
+        <input type="button" value="calcular" onclick="calcular_ano()" />
+      </form>
+    </section>
+    <footer>
+      <p>&copy; Lucas Louvem</p>
+    </footer>
+  </body>
+</html>
